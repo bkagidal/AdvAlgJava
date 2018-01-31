@@ -15,12 +15,28 @@ public class DFS {
 
 		for (Vertex v : vertices) {
 			if (!v.isVisited()) {
-				dfsTraversal(v);
+				//dfsStack(v);
+				dfsRecursion(v);
+			}
+		}
+	}
+	
+	
+	private void dfsRecursion(Vertex root){
+		
+		System.out.print(root +" ");
+		
+		//root.setVisited(true);
+		
+		for(Vertex v:root.getNeighbors()){
+			if(!v.isVisited()){
+				v.setVisited(true);
+				dfsRecursion(v);
 			}
 		}
 	}
 
-	private void dfsTraversal(Vertex root) {
+	private void dfsStack(Vertex root) {
 		stack.push(root);
 		root.setVisited(true);
 
