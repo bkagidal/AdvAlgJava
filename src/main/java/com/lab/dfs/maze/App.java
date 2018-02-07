@@ -8,9 +8,11 @@ public class App {
 		
 		reader.parseFile();
 		
-		MazeSolver maze = new MazeSolver(reader.getData(),reader.getStartRowOrdinate(), reader.getStartColOrdinate());
-		
-		maze.findWayOut();
+	//	MazeSolver maze = new MazeSolver(reader.getData(),reader.getStartRowOrdinate(), reader.getStartColOrdinate());
+	//	maze.findWayOut();
+	
+		MazeSolver1 maze = new MazeSolver1(reader.getData(),reader.getStartRowOrdinate(), reader.getStartColOrdinate());
+		maze.findWay();
 	}
 
 }

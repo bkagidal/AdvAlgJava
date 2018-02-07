@@ -19,7 +19,7 @@ public class MazeSolver1 {
 	public void findWay(){
 		
 		try {
-			dfs(startRow,startCol);
+			dfs(startRow,startCol+1);
 			System.out.println("There is no route found...");
 		} catch (Exception e) {
 			System.out.println("Route found ......");
