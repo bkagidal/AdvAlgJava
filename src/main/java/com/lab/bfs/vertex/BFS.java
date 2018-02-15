@@ -17,7 +17,7 @@ public class BFS {
 		root.setVisited(true);
 
 		while (!queue.isEmpty()) {
-			
+
 			Vertex v = queue.remove();
 			System.out.println(v);
 
