@@ -9,7 +9,7 @@ public class Vertex {
 	private List<Edge> adjList;
 	private Vertex predecessor;
 	private boolean visited;
-	private double minDistance;
+	private double minDistance = Double.MAX_VALUE;
 	
 	public double getMinDistance() {
 		return minDistance;
