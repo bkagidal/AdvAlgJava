@@ -6,8 +6,8 @@ import java.util.List;
 
 public class SingleTour {
 
-	List<City> tour;
-	double distance;
+	private List<City> tour;
+	private double distance;
 
 	public SingleTour() {
 
@@ -18,11 +18,24 @@ public class SingleTour {
 	}
 
 	public SingleTour(List<City> tour) {
-		this.tour = tour;
+		
+		List<City> currentTour = new ArrayList<>();
+		
+		for(int i=0;i< tour.size() ;++i)
+			currentTour.add(null);
+		
+		for(int i=0;i< tour.size() ;++i)
+			currentTour.set(i, tour.get(i));
+		
+		this.tour = currentTour;
 	}
 
 	public List<City> getTour() {
 		return this.tour;
+	}
+	
+	public int getTourSize(){
+		return this.tour.size();
 	}
 
 	public void setTour(List<City> tour) {

@@ -5,6 +5,12 @@ public class City {
 	private int x;
 	private int y;
 	private String cityName;
+	
+	public City() {
+		
+		this.x = (int) (Math.random()*100);
+		this.y = (int) (Math.random() * 100);
+	}
 
 	public City(String cityName, int x, int y) {
 		this.cityName = cityName;
@@ -49,7 +55,7 @@ public class City {
 
 	@Override
 	public String toString() {
-		return this.cityName;
+		return this.x +"-"+ this.y;
 	}
 
 }
